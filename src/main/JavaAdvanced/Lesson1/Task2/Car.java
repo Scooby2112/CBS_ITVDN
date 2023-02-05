@@ -1,4 +1,4 @@
-package JavaAdvanced.Lesson1.Task2;
+package main.JavaAdvanced.Lesson1.Task2;
 
 public class Car implements Comparable { //<Car>{
     int speed;
