@@ -1,4 +1,4 @@
-package main.JavaAdvanced.Lesson2.Task3;
+package main.Java_4_Advanced.Lesson2.Task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;

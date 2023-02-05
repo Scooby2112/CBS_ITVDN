@@ -1,4 +1,4 @@
-package main.JavaAdvanced.Lesson1.Task1;
+package main.Java_4_Advanced.Lesson1.Task1;
 
 import java.util.ArrayList;
 import java.util.Collections;
