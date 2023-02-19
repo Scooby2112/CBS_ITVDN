@@ -1,9 +1,8 @@
-package Java_4_Advanced.Lesson7.Task2;
+package Java_4_Advanced.Lesson7.Task2_Task3;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlValue;
 
 @XmlAccessorType(XmlAccessType.NONE)
 public class City {
