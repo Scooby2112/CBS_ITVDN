@@ -21,9 +21,9 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws JAXBException {
-        writeXML();
-//        parseSAX();
-        parseJAXB();
+//        writeXML();
+        parseSAX();
+//        parseJAXB();
     }
 
     public static void parseJAXB() throws JAXBException {
@@ -36,7 +36,7 @@ public class Main {
     }
 
     public static void parseSAX() {
-        String file = "file:///C:\\Users\\Вова\\IdeaProjects\\Java_ITVDN\\Java_04_Advanced\\src\\main\\java\\Java_4_Advanced\\Lesson7\\Task2\\File.xml";
+        String file = "file:///C:\\Users\\Вова\\IdeaProjects\\Java_ITVDN\\Java_04_Advanced\\src\\main\\java\\Java_4_Advanced\\Lesson7\\Task2_Task3\\File.xml";
         SAXParserFactory factory = SAXParserFactory.newInstance();
 
         try {
@@ -127,7 +127,7 @@ public class Main {
             Transformer t = tf.newTransformer();
 
             DOMSource source = new DOMSource(doc);
-            StreamResult sr = new StreamResult(new File("C:\\Users\\Вова\\IdeaProjects\\Java_ITVDN\\Java_04_Advanced\\src\\main\\java\\Java_4_Advanced\\Lesson7\\Task2\\File.xml"));
+            StreamResult sr = new StreamResult(new File("C:\\Users\\Вова\\IdeaProjects\\Java_ITVDN\\Java_04_Advanced\\src\\main\\java\\Java_4_Advanced\\Lesson7\\Task2_Task3\\File.xml"));
 
             // ТРАНСФОРМУЄМО З ДЖЕРЕЛА В ФАЙЛ
             t.transform(source, sr);
