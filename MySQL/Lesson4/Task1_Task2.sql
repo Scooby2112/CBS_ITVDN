@@ -1,6 +1,10 @@
+DROP DATABASE myjoinsdb;
+
+CREATE DATABASE myjoinsdb;
+
 USE myjoinsdb;
 
-    CREATE TABLE positions (
+CREATE TABLE positions (
     id int not null auto_increment primary key,
     position varchar (20),
     salary double not null);
