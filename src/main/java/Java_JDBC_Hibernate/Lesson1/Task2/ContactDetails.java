@@ -1,4 +1,4 @@
-package Java_JDBC_Hibernate.Lesson1.Task1;
+package Java_JDBC_Hibernate.Lesson1.Task2;
 
 import java.util.Date;
 

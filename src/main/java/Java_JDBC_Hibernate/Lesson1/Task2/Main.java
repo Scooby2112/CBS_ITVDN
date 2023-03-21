@@ -1,26 +1,35 @@
 package Java_JDBC_Hibernate.Lesson1.Task2;
 
-import lombok.SneakyThrows;
 
 public class Main {
-    @SneakyThrows
     public static void main(String[] args) {
-        Requests requests = new Requests();
-        requests.registerDriver();
+        Sample sample = new Sample();
 
-//                                       ДЛЯ ЗАПОВНЕННЯ ТАБЛИЦІ:
-//                                                 |
-//                                                 V
-//        requests.insertInto();
+//                                            FIRST
+//                                              |
+//                                              v
+//        List<ContactDetails> contactDetails = sample.getContactDetails();
+//        for (ContactDetails contactDetails1 : contactDetails){
+//            System.out.println(contactDetails1.getLastName() + " " + contactDetails1.getFirstName() +
+//                    " " + contactDetails1.getPhone() + " " + contactDetails1.getLocation());
+//        }
 
-//                                  ДЛЯ ВИДАЛЕННЯ ДАНИХ З ТАБЛИЦІ:
-//                                                 |
-//                                                 V
-//        requests.delete();
+//                                            SECOND
+//                                              |
+//                                              v
+//        List<ContactDetails> contactDetails = sample.getContactDetails2();
+//        for (ContactDetails contactDetails1 : contactDetails){
+//            System.out.println(contactDetails1.getLastName() + " " + contactDetails1.getFirstName() +
+//                    " " + contactDetails1.getPhone() + " " + contactDetails1.getDate());
+//        }
 
-//                                  ДЛЯ ОНОВЛЕННЯ ДАНИХ В ТАБЛИЦІ
-//                                                 |
-//                                                 V
-//        requests.update();
+//                                            THIRD
+//                                              |
+//                                              v
+//        List<ContactDetails> contactDetails = sample.getContactDetails3();
+//        for (ContactDetails contactDetails1 : contactDetails){
+//            System.out.println(contactDetails1.getLastName() + " " + contactDetails1.getFirstName() +
+//                    " " + contactDetails1.getPhone() + " " + contactDetails1.getDate());
+//        }
     }
 }

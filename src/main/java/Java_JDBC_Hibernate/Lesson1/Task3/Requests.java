@@ -1,4 +1,4 @@
-package Java_JDBC_Hibernate.Lesson1.Task2;
+package Java_JDBC_Hibernate.Lesson1.Task3;
 
 import java.io.*;
 import java.sql.*;
