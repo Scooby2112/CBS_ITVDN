@@ -1,0 +1,1 @@
+UPDATE employees SET first_name = 'Володимир' WHERE id = 7
