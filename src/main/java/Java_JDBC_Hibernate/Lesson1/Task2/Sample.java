@@ -1,14 +1,14 @@
 package Java_JDBC_Hibernate.Lesson1.Task2;
 
+import Java_JDBC_Hibernate.Connection.Connect;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Sample {
 
-    private final String URL = "jdbc:mysql://127.0.0.1:3306/myjoinsdb";
-    private final String LOGIN = "root";
-    private final String PASSWORD = "root";
+    private final Connect connect = new Connect();
 
     public Sample() {
         try {
@@ -23,7 +23,7 @@ public class Sample {
 
         List<ContactDetails> contactDetails = new ArrayList<>();
 
-        try(Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+        try(Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
             Statement statement = connection.createStatement()) {
 
             ResultSet resultSet = statement.executeQuery(
@@ -47,7 +47,7 @@ public class Sample {
 
         List<ContactDetails> contactDetails = new ArrayList<>();
 
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+        try (Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
              Statement statement = connection.createStatement()) {
 
             ResultSet resultSet = statement.executeQuery(
@@ -70,7 +70,7 @@ public class Sample {
     public List<ContactDetails> getContactDetails3() {
         List<ContactDetails> contactDetails = new ArrayList<>();
 
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+        try (Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
              Statement statement = connection.createStatement()) {
 
             ResultSet resultSet = statement.executeQuery(

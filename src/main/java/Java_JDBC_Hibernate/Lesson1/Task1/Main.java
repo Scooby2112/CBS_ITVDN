@@ -1,5 +1,6 @@
 package Java_JDBC_Hibernate.Lesson1.Task1;
 
+import Java_JDBC_Hibernate.Connection.Connect;
 import lombok.SneakyThrows;
 
 import java.io.*;
@@ -9,9 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Main {
-    private static final String URL = "jdbc:mysql://localhost:3306/testdatabase";
-    private static final String LOGIN = "root";
-    private static final String PASSWORD = "root";
+    private static final Connect connect = new Connect();
 
     public static void main(String[] args) throws IOException {
         insert();
@@ -23,7 +22,7 @@ public class Main {
         BufferedReader reader = new BufferedReader(new FileReader(f));
         String insert = reader.readLine();
 
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+        try (Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
              Statement statement = connection.createStatement()){
             statement.executeUpdate(insert);
         } catch (SQLException e) {
