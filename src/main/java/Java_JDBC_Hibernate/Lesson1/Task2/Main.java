@@ -1,6 +1,8 @@
 package Java_JDBC_Hibernate.Lesson1.Task2;
 
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Sample sample = new Sample();
@@ -8,28 +10,28 @@ public class Main {
 //                                            FIRST
 //                                              |
 //                                              v
-//        List<ContactDetails> contactDetails = sample.getContactDetails();
-//        for (ContactDetails contactDetails1 : contactDetails){
-//            System.out.println(contactDetails1.getLastName() + " " + contactDetails1.getFirstName() +
-//                    " " + contactDetails1.getPhone() + " " + contactDetails1.getLocation());
-//        }
+        List<ContactDetails> contactDetails = sample.getContactDetails();
+        for (ContactDetails contactDetails1 : contactDetails){
+            System.out.println(contactDetails1.lastName() + " " + contactDetails1.firstName() +
+                    " " + contactDetails1.phone() + " " + contactDetails1.location());
+        }
 
 //                                            SECOND
 //                                              |
 //                                              v
-//        List<ContactDetails> contactDetails = sample.getContactDetails2();
-//        for (ContactDetails contactDetails1 : contactDetails){
-//            System.out.println(contactDetails1.getLastName() + " " + contactDetails1.getFirstName() +
-//                    " " + contactDetails1.getPhone() + " " + contactDetails1.getDate());
-//        }
+        contactDetails = sample.getContactDetails2();
+        for (ContactDetails contactDetails1 : contactDetails){
+            System.out.println(contactDetails1.lastName() + " " + contactDetails1.firstName() +
+                    " " + contactDetails1.phone() + " " + contactDetails1.date());
+        }
 
 //                                            THIRD
 //                                              |
 //                                              v
-//        List<ContactDetails> contactDetails = sample.getContactDetails3();
-//        for (ContactDetails contactDetails1 : contactDetails){
-//            System.out.println(contactDetails1.getLastName() + " " + contactDetails1.getFirstName() +
-//                    " " + contactDetails1.getPhone() + " " + contactDetails1.getDate());
-//        }
+        contactDetails = sample.getContactDetails3();
+        for (ContactDetails contactDetails1 : contactDetails){
+            System.out.println(contactDetails1.lastName() + " " + contactDetails1.firstName() +
+                    " " + contactDetails1.phone() + " " + contactDetails1.date());
+        }
     }
 }

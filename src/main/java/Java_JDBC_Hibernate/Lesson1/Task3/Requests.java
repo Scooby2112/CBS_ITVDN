@@ -6,7 +6,11 @@ import java.io.*;
 import java.sql.*;
 
 public class Requests {
-    private final Connect connect = new Connect();
+    private final Connect connect = new Connect(
+            "./src/main/java/Java_JDBC_Hibernate/Connection/connect.properties",
+            "com.mysql.jdbc.Driver"
+    ).loadProperties().loadDriver();
+
     private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private File fileRequest;
     private BufferedReader fileReader;
@@ -86,15 +90,6 @@ public class Requests {
         writer(tableID);
 
         updating();
-    }
-
-    protected void registerDriver() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Driver load success");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private void writer(int tableID) throws IOException {

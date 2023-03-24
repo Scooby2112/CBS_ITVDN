@@ -6,7 +6,6 @@ public class Main {
     @SneakyThrows
     public static void main(String[] args) {
         Requests requests = new Requests();
-        requests.registerDriver();
 
 //        requests.insertInto();
 
