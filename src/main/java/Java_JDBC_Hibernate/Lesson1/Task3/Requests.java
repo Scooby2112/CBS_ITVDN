@@ -1,24 +1,20 @@
 package Java_JDBC_Hibernate.Lesson1.Task3;
 
+import Java_JDBC_Hibernate.Connection.Connect;
+
 import java.io.*;
 import java.sql.*;
 
 public class Requests {
-
-    private static final String URL = "jdbc:mysql://localhost:3306/testdatabase";
-    private static final String LOGIN = "root";
-    private static final String PASSWORD = "root";
-
-    private final String INSERT = "INSERT INTO employees (last_name, first_name, surname, age, phone, birthday, location) "
-            + "VALUES (?,?,?,?,?,?,?)";
-    private final String DELETE = "DELETE FROM employees WHERE id = ?";
-
-    private static final File FILE = new File("C:\\Users\\Вова\\IdeaProjects\\Java_ITVDN\\src\\main\\java\\Java_JDBC_Hibernate\\Lesson1\\Task2\\Update\\Update.txt");
-
-    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private final Connect connect = new Connect();
+    private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private File fileRequest;
+    private BufferedReader fileReader;
 
     public void insertInto() throws IOException {
-
+        fileRequest = new File("./src/main/java/java_JDBC_Hibernate/Lesson1/Task3/Requests/Insert.txt");
+        fileReader = new BufferedReader(new FileReader(fileRequest));
+        String insert = fileReader.readLine();
 
         String lastName;
         String firstName;
@@ -28,10 +24,10 @@ public class Requests {
         Date date;
         String location;
 
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             PreparedStatement statement = connection.prepareStatement(INSERT)) {
+        try (Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
+             PreparedStatement statement = connection.prepareStatement(insert)) {
 
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 1; i++) {
                 System.out.println("Введіть прізвище:");
                 statement.setString(1, lastName = reader.readLine());
 
@@ -62,10 +58,12 @@ public class Requests {
     }
 
     public void delete() throws IOException {
+        fileRequest = new File("./src/main/java/java_JDBC_Hibernate/Lesson1/Task3/Requests/Delete.txt");
+        fileReader = new BufferedReader(new FileReader(fileRequest));
+        String remove = fileReader.readLine();
 
-
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
-             PreparedStatement statement = connection.prepareStatement(DELETE)) {
+        try (Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
+             PreparedStatement statement = connection.prepareStatement(remove)) {
 
             int id;
 
@@ -99,8 +97,10 @@ public class Requests {
         }
     }
 
-    private static void writer(int tableID) throws IOException {
-        PrintWriter printWriter = new PrintWriter(new FileWriter(FILE), false);
+    private void writer(int tableID) throws IOException {
+        fileRequest = new File("./src/main/java/java_JDBC_Hibernate/Lesson1/Task3/Requests/Update.txt");
+
+        PrintWriter printWriter = new PrintWriter(new FileWriter(fileRequest), false);
 
         System.out.println("Введіть id поля яке хочете змінити:");
         int id = Integer.parseInt(reader.readLine());
@@ -151,11 +151,12 @@ public class Requests {
 
     }
 
-    private static void updating() throws IOException {
-        BufferedReader fileReader = new BufferedReader(new FileReader(FILE));
+    private void updating() throws IOException {
+        fileRequest = new File("./src/main/java/java_JDBC_Hibernate/Lesson1/Task3/Requests/Update.txt");
+        fileReader = new BufferedReader(new FileReader(fileRequest));
         String update = fileReader.readLine();
 
-        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+        try (Connection connection = DriverManager.getConnection(connect.url(), connect.login(), connect.password());
              Statement statement = connection.createStatement()) {
             statement.executeUpdate(update);
         } catch (SQLException e) {

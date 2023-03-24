@@ -8,19 +8,10 @@ public class Main {
         Requests requests = new Requests();
         requests.registerDriver();
 
-//                                       ДЛЯ ЗАПОВНЕННЯ ТАБЛИЦІ:
-//                                                 |
-//                                                 V
 //        requests.insertInto();
 
-//                                  ДЛЯ ВИДАЛЕННЯ ДАНИХ З ТАБЛИЦІ:
-//                                                 |
-//                                                 V
-//        requests.delete();
+        requests.update();
 
-//                                  ДЛЯ ОНОВЛЕННЯ ДАНИХ В ТАБЛИЦІ
-//                                                 |
-//                                                 V
-//        requests.update();
+        requests.delete();
     }
 }

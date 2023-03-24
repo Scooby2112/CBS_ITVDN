@@ -19,7 +19,7 @@ public class Main {
 
 
     private static void insert() throws IOException {
-        File f = new File("C:\\Users\\Вова\\IdeaProjects\\Java_ITVDN\\src\\main\\java\\Java_JDBC_Hibernate\\Lesson1\\Task1\\INSERT.txt");
+        File f = new File("./src/main/java/Java_JDBC_Hibernate/Lesson1/Task1/INSERT.TXT");
         BufferedReader reader = new BufferedReader(new FileReader(f));
         String insert = reader.readLine();
 
