@@ -1,5 +1,6 @@
 package Java_4_Advanced.Lesson8.Task3;
 
+
 import lombok.SneakyThrows;
 
 public class Synchronize {

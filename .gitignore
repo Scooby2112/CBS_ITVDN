@@ -1,33 +1,23 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+/target/classes/Java_4_Advanced/Lesson7/Task2_Task3/City.class
+/target/classes/Java_4_Advanced/Lesson7/Task2_Task3/Main$1.class
+/target/classes/Java_4_Advanced/Lesson7/Task2_Task3/Main.class
+/target/classes/Java_4_Advanced/Lesson7/Task2_Task3/Street.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+*.class
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+*.log
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+*.ctxt
 
-### VS Code ###
-.vscode/
+.mtj.tmp/
+
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+hs_err_pid*
+replay_pid*
