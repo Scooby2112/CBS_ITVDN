@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Animal {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private String name;
     private int age;

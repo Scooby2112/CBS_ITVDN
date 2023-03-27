@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal();
 
-        animal.setId(1);
-        animal.setAge(15);
-        animal.setName("Nik");
+//        animal.setId(1);
+        animal.setAge(16);
+        animal.setName("Nika");
         animal.setTail(true);
 
         SessionFactory factory = new Configuration()
