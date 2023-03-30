@@ -4,7 +4,7 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name = "hibernate.dialect">
+        <property name="hibernate.dialect">
             org.hibernate.dialect.MySQLDialect
         </property>
 
@@ -13,7 +13,7 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/myhibernate?serverTimezone=UTC
+            jdbc:mysql://localhost:3306/animals?serverTimezone=UTC
         </property>
 
 
@@ -28,12 +28,15 @@
         <property name="connection.pool_size">
             2
         </property>
-        
+
         <property name="hbm2ddl.auto">update</property>
 
         <property name="show_sql">true</property>
 
+        <property name="current_session_context_class">
+            thread
+        </property>
 
-        <mapping class="Java_JDBC_Hibernate.Lesson3.Animal"/>
+        <mapping class="Java_JDBC_Hibernate.Lesson4.Task2.Animal"/>
     </session-factory>
 </hibernate-configuration>
