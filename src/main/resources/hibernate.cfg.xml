@@ -13,7 +13,7 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/myhibernate?serverTimezone=UTC
+            jdbc:mysql://localhost:3306/animals?serverTimezone=UTC
         </property>
 
 
@@ -22,7 +22,7 @@
         </property>
 
         <property name="hibernate.connection.password">
-            my-secret-pw
+            root
         </property>
 
         <property name="connection.pool_size">
