@@ -1,50 +1,40 @@
 package Java_JDBC_Hibernate.Lesson4.Task2;
 
-import javax.persistence.EntityManager;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.util.List;
 
 public class AnimalRepository {
-    private EntityManagerFactory emf;
-    private EntityManager em;
+    private SessionFactory sessionFactory;
 
     public AnimalRepository(){
-        emf = Persistence.createEntityManagerFactory("mohr");
-        em = emf.createEntityManager();
+        sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 
     public Animal getByID(int id){
-        em.getTransaction().begin();
-        Animal animal = em.find(Animal.class, id);
-        em.getTransaction().commit();
-        emf.close();
-        return animal;
+        Session session = sessionFactory.getCurrentSession();
+        return session.find(Animal.class, id);
     }
 
     public void add(Animal animal){
-        em.getTransaction().begin();
-        em.merge(animal);
-        em.getTransaction().commit();
-        emf.close();
+        Session session = sessionFactory.getCurrentSession();
+        session.beginTransaction();
+        session.persist(animal);
+        session.getTransaction().commit();
     }
 
     public void remove(Animal animal){
-        em.getTransaction().begin();
-        em.remove(animal);
-        em.getTransaction().commit();
-        emf.close();
+        Session session = sessionFactory.getCurrentSession();
+        session.remove(session.find(Animal.class, animal.getId()));
     }
 
-    @SuppressWarnings(value = "unchecked")
     public List<Animal> getAnimalList(){
-        em.getTransaction().begin();
-        Query query = em.createQuery("SELECT * FROM animals");
-        List<Animal> animalList = query.getResultList();
-        em.getTransaction().commit();
-        emf.close();
-
-        return animalList;
+        Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("SELECT * FROM Animal", Animal.class)
+                .getResultList();
     }
 }

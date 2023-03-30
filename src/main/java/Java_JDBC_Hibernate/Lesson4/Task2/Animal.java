@@ -1,7 +1,7 @@
 package Java_JDBC_Hibernate.Lesson4.Task2;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "animals")
