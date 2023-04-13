@@ -21,9 +21,9 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws JAXBException {
-        writeXML();
+//        writeXML();
 //        parseSAX();
-//        parseJAXB();
+        parseJAXB();
     }
 
     public static void parseJAXB() throws JAXBException {

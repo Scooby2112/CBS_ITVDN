@@ -1,22 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Beers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="Beer.xsd">
+       xsi:noNamespaceSchemaLocation="Beer.xsd">
 
-  <Beer Manufacturer="Example Brewery">
-    <Name>Example Beer</Name>
-    <Type>Light</Type>
-    <Alcohol>Yes</Alcohol>
-    <Ingredients>
-      <Ingredient>Water</Ingredient>
-      <Ingredient>Malt</Ingredient>
-      <Ingredient>Hops</Ingredient>
-    </Ingredients>
-    <Chars>
-      <ABV>5%</ABV>
-      <Transparency>90%</Transparency>
-      <Filtered>Yes</Filtered>
-      <Calories>150 kcal</Calories>
-    </Chars>
-  </Beer>
+    <Beer Manufacturer="Example Brewery">
+        <Name>Example Beer</Name>
+        <Type>Light</Type>
+        <Alcohol>true</Alcohol>
+        <Ingredients>
+            <Ingredient>Water</Ingredient>
+            <Ingredient>Malt</Ingredient>
+            <Ingredient>Hops</Ingredient>
+            <Ingredient>Yeast</Ingredient>
+            <Ingredient>Coriander</Ingredient>
+        </Ingredients>
+        <Chars>
+            <ABV>5%</ABV>
+            <Transparency>90%</Transparency>
+            <Filtered>true</Filtered>
+            <Calories>150 kcal</Calories>
+        </Chars>
+    </Beer>
+
+    <Beer Manufacturer="Уманьпиво">
+        <Name>Waissburg</Name>
+        <Type>Light</Type>
+        <Alcohol>true</Alcohol>
+        <Ingredients>
+            <Ingredient>Water</Ingredient>
+            <Ingredient>Malt</Ingredient>
+            <Ingredient>Hops</Ingredient>
+            <Ingredient>Pectin</Ingredient>
+            <Ingredient>Coriander</Ingredient>
+            <Ingredient>Yeast</Ingredient>
+        </Ingredients>
+        <Chars>
+            <ABV>4.7%</ABV>
+            <Transparency>80%</Transparency>
+            <Filtered>true</Filtered>
+            <Calories>175 kcal</Calories>
+        </Chars>
+    </Beer>
+
 </Beers>

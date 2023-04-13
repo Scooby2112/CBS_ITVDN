@@ -4,19 +4,22 @@
         <xs:sequence>
             <xs:element name="ABV" type="xs:string"/>
             <xs:element name="Transparency" type="xs:string"/>
-            <xs:element name="Filtered" type="xs:string"/>
+            <xs:element name="Filtered" type="xs:boolean"/>
             <xs:element name="Calories" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="Ingredients">
         <xs:sequence>
-            <xs:element name="Ingredient" maxOccurs="unbounded">
+            <xs:element name="Ingredient" minOccurs="0" maxOccurs="unbounded">
                 <xs:simpleType>
-                    <xs:restriction base="xs:string">
+                    <xs:restriction base="xs:string" >
                         <xs:enumeration value="Water"/>
                         <xs:enumeration value="Malt"/>
                         <xs:enumeration value="Hops"/>
+                        <xs:enumeration value="Pectin"/>
+                        <xs:enumeration value="Coriander"/>
+                        <xs:enumeration value="Yeast"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -26,7 +29,7 @@
         <xs:sequence>
             <xs:element name="Name" type="xs:string"/>
             <xs:element name="Type" type="xs:string"/>
-            <xs:element name="Alcohol" type="xs:string"/>
+            <xs:element name="Alcohol" type="xs:boolean"/>
             <xs:element name="Ingredients" type="Ingredients"/>
             <xs:element name="Chars" type="Chars"/>
         </xs:sequence>
