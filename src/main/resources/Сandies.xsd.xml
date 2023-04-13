@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Candies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Сandies.xsd">
+    <Candy Name="Snickers Chocolate Bar">
+        <Manufacturer>Mars, Inc.</Manufacturer>
+        <Type>Chocolate bar with caramel, peanut, and nougat filling</Type>
+        <Weight>0.050</Weight>
+        <Composition>
+            <Composition>Milk chocolate</Composition>
+            <Composition>Peanuts</Composition>
+            <Composition>Sugar</Composition>
+            <Composition>Glucose syrup</Composition>
+            <Composition>Condensed milk</Composition>
+            <Composition>Caramel</Composition>
+            <Composition>Egg white</Composition>
+            <Composition>Flavorings</Composition>
+        </Composition>
+        <ExpirationDate>12 months</ExpirationDate>
+    </Candy>
+    <Candy Name="Skittles Chewy Candy">
+        <Manufacturer>Wrigley Company (Mars, Inc.)</Manufacturer>
+        <Type>Chewy candy with fruit flavors</Type>
+        <Weight>0.036</Weight>
+        <Composition>
+            <Composition>Sugar</Composition>
+            <Composition>Modified starch</Composition>
+            <Composition>Glucose syrup</Composition>
+            <Composition>Flavorings</Composition>
+            <Composition>Carrot</Composition>
+            <Composition>elderberry</Composition>
+            <Composition>lemon</Composition>
+            <Composition>mango</Composition>
+            <Composition>orange</Composition>
+            <Composition>passionfruit</Composition>
+            <Composition>antioxidants (BHT, BHA)</Composition>
+        </Composition>
+        <ExpirationDate>24 months</ExpirationDate>
+    </Candy>
+    <Candy Name="Werther's Original Caramel">
+        <Manufacturer>August Storck KG</Manufacturer>
+        <Type>Hard caramel with a creamy milk taste</Type>
+        <Weight>0.050</Weight>
+        <Composition>
+            <Composition>Sugar</Composition>
+            <Composition>Glucose syrup</Composition>
+            <Composition>Butter</Composition>
+            <Composition>Cream powder</Composition>
+            <Composition>Salt</Composition>
+            <Composition>Emulsifier </Composition>
+            <Composition>Flavorings</Composition>
+        </Composition>
+        <ExpirationDate>12 months</ExpirationDate>
+    </Candy>
+</Candies>
