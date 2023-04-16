@@ -13,6 +13,21 @@ public class Beers {
     private boolean filtered;
     private String calories;
 
+    public Beers() {
+    }
+
+    public Beers(String manufacturer, String name, String type, boolean alcohol, List<String> ingredients, String ABV, String transparency, boolean filtered, String calories) {
+        this.manufacturer = manufacturer;
+        this.name = name;
+        this.type = type;
+        this.alcohol = alcohol;
+        this.ingredients = ingredients;
+        this.ABV = ABV;
+        this.transparency = transparency;
+        this.filtered = filtered;
+        this.calories = calories;
+    }
+
     public String getName() {
         return name;
     }
